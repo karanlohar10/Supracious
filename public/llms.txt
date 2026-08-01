@@ -1,0 +1,14 @@
+# Supracious
+
+> Supracious is a premium Indian spice export company delivering globally
+> certified, farm-fresh spices to international markets with a focus on
+> quality, sustainability, and reliable logistics.
+
+## Pages
+
+- [Home](/): Company welcome, profile, why choose us, certifications, highlights.
+- [About Us](/about): Company profile, scope of business, manufacturing unit overview.
+- [Manufacturing](/manufacturing): Manufacturing process, infrastructure, quality control, nutritional value, shelf life & storage.
+- [Exports](/exports): Countries served, export process, packaging & logistics.
+- [Quality Assurance](/quality-assurance): Quality policy, certifications, testing process.
+- [Contact Us](/contact): Contact details, inquiry form, location map.
