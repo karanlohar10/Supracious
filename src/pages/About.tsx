@@ -46,7 +46,7 @@ export default function About() {
                 <p className="mt-1 font-body text-sm font-medium text-gold">
                   {founder.role}
                 </p>
-                <p className="font-body text-xs uppercase tracking-wide text-brown/70">
+                <p className="font-body text-xs tracking-wide text-brown/70">
                   {founder.qualification}
                 </p>
                 <p className="mt-3 font-body text-sm leading-relaxed text-brown/90">
