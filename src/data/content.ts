@@ -12,6 +12,7 @@ export const siteInfo = {
     "drsunilrayat@gmail.com",
   ],
   enquiryEmail: "pratibhas1820@gmail.com",
+  enquiryCcEmails: ["info.supracious@gmail.com", "drsunilrayat@gmail.com"],
   phone: "+91-8766593708",
   phones: ["+91-8766593708", "+91-9890967352"],
   address: "Chafal, Maharashtra 415520",

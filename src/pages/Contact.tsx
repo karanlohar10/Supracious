@@ -53,9 +53,9 @@ export default function Contact() {
     ]
       .filter((line) => line !== null)
       .join("\n");
-    window.location.href = `mailto:${siteInfo.enquiryEmail}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${siteInfo.enquiryEmail}?cc=${encodeURIComponent(
+      siteInfo.enquiryCcEmails.join(",")
+    )}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
     setForm(initialState);
   };
