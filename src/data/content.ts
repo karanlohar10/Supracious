@@ -77,6 +77,24 @@ export const scopeOfBusiness = [
   "International Shipping",
 ];
 
+export const foundersIntro =
+  "When Researchers Turn Entrepreneurs, Purity Becomes a Promise";
+
+export const founders = [
+  {
+    name: "Dr. Sunil Jadhav",
+    role: "Co-Founder & Director",
+    qualification: "Ph.D. in Chemistry",
+    bio: "A dedicated researcher with a Ph.D. in Chemistry, Dr. Sunil Jadhav brings a scientist's precision and rigor to every batch we source, test, and export — turning laboratory-grade quality control into a business promise.",
+  },
+  {
+    name: "Pratibha Sutar",
+    role: "Co-Founder & Director",
+    qualification: "M.Sc. Chemistry",
+    bio: "An M.Sc. Chemistry graduate and Dr. Jadhav's former student, Pratibha Sutar pairs deep scientific grounding with a sharp business sense, ensuring every shipment meets the same exacting standards it was researched to achieve.",
+  },
+];
+
 export const cateredTo = [
   "Importers",
   "Distributors",

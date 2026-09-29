@@ -2,9 +2,9 @@ import { HeroBanner } from "@/components/layout/HeroBanner";
 import { Section } from "@/components/layout/Section";
 import { CheckList } from "@/components/layout/CheckList";
 import { Reveal } from "@/components/layout/Reveal";
-import { scopeOfBusiness, cateredTo } from "@/data/content";
+import { scopeOfBusiness, cateredTo, founders, foundersIntro } from "@/data/content";
 import heroAbout from "@/assets/hero/about.jpg";
-import { Factory } from "lucide-react";
+import { Factory, FlaskConical, GraduationCap } from "lucide-react";
 
 export default function About() {
   return (
@@ -23,6 +23,40 @@ export default function About() {
         tone="white"
         description="Supracious was established with the vision of bringing the rich flavors of India to customers worldwide. We specialize in exporting premium-quality spices, pulses, cereals, and other agricultural products while maintaining the highest standards of quality, consistency, and customer satisfaction. Our business philosophy is built on trust, transparency, innovation, and continuous improvement."
       />
+
+      {/* Our Founders */}
+      <Section
+        eyebrow="Our Founders"
+        title={foundersIntro}
+        description="Supracious was born at the intersection of chemistry and commerce — founded by a researcher and his student, both committed to bringing lab-grade precision to every export."
+        tone="forest"
+      >
+        <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
+          {founders.map((founder, idx) => (
+            <Reveal key={founder.name} delay={idx * 80}>
+              <div className="h-full rounded-xl border border-forest/15 bg-ivory p-6 text-center shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+                {idx === 0 ? (
+                  <FlaskConical className="mx-auto text-forest" size={36} />
+                ) : (
+                  <GraduationCap className="mx-auto text-forest" size={36} />
+                )}
+                <h3 className="mt-3 font-heading text-lg font-semibold text-forest-dark">
+                  {founder.name}
+                </h3>
+                <p className="mt-1 font-body text-sm font-medium text-gold">
+                  {founder.role}
+                </p>
+                <p className="font-body text-xs uppercase tracking-wide text-brown/70">
+                  {founder.qualification}
+                </p>
+                <p className="mt-3 font-body text-sm leading-relaxed text-brown/90">
+                  {founder.bio}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
 
       {/* Scope of Business */}
       <Section
