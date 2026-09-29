@@ -32,9 +32,6 @@ export default function Exports() {
             </Reveal>
           ))}
         </div>
-        <p className="mt-8 text-center font-body text-sm italic text-brown/70">
-          Additional countries can be added as the business expands.
-        </p>
       </Section>
 
       {/* Export Process */}

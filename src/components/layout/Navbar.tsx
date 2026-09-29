@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Button } from "@/components/ui/button";
 import { navLinks, siteInfo } from "@/data/content";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/logo.jpg";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,24 +27,39 @@ export function Navbar() {
           : "bg-gradient-to-b from-black/50 to-transparent",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 sm:px-10">
-        <Link to="/" className="flex flex-col leading-none">
-          <span
-            className={cn(
-              "font-heading text-2xl font-bold tracking-wide transition-colors",
-              scrolled ? "text-forest" : "text-ivory",
-            )}
-          >
-            {siteInfo.name}
-          </span>
-          <span
-            className={cn(
-              "font-body text-[10px] uppercase tracking-[0.3em] transition-colors",
-              scrolled ? "text-brown" : "text-gold-light",
-            )}
-          >
-            Exim Pvt Ltd
-          </span>
+      <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 sm:px-10">
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src={logo}
+            alt={`${siteInfo.name} logo`}
+            className="h-12 w-12 shrink-0 rounded-full bg-ivory object-contain sm:h-14 sm:w-14"
+          />
+          <div className="flex flex-col gap-1">
+            <span
+              className={cn(
+                "font-heading text-2xl font-bold leading-tight tracking-wide transition-colors",
+                scrolled ? "text-forest" : "text-ivory",
+              )}
+            >
+              {siteInfo.name}
+            </span>
+            <span
+              className={cn(
+                "font-body text-[10px] uppercase leading-tight tracking-[0.3em] transition-colors",
+                scrolled ? "text-brown" : "text-gold-light",
+              )}
+            >
+              Exim Pvt Ltd
+            </span>
+            <span
+              className={cn(
+                "font-body text-[10px] leading-tight tracking-wide transition-colors",
+                scrolled ? "text-brown/80" : "text-ivory/80",
+              )}
+            >
+              {siteInfo.motto}
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
@@ -87,8 +103,18 @@ export function Navbar() {
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-ivory">
-            <SheetTitle className="px-4 pt-4 font-heading text-xl text-forest">
-              {siteInfo.name}
+            <SheetTitle className="flex flex-col gap-1 px-4 pt-4 font-heading text-xl text-forest">
+              <span className="flex items-center gap-3">
+                <img
+                  src={logo}
+                  alt={`${siteInfo.name} logo`}
+                  className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
+                />
+                {siteInfo.name}
+              </span>
+              <span className="font-body text-xs font-normal text-brown/70">
+                {siteInfo.motto}
+              </span>
             </SheetTitle>
             <nav className="mt-6 flex flex-col gap-1 px-4">
               {navLinks.map((link) => (

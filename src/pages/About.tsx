@@ -49,9 +49,9 @@ export default function About() {
         </Reveal>
       </Section>
 
-      {/* Manufacturing Unit */}
+      {/* Our Facility */}
       <Section
-        eyebrow="Manufacturing Unit"
+        eyebrow="Our Facility"
         title="Modern, Hygienic, Consistent"
         tone="white"
       >

@@ -40,8 +40,22 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
-    // Front-end only: no backend wired up yet. Replace with an API/email
+    // Front-end only: no backend wired up yet. For now, route enquiries via a
+    // mailto: link to the designated recipient. Replace with an API/email
     // service call (e.g. Formspree, EmailJS) when ready to go live.
+    const subject = `New Inquiry from ${form.name}${form.company ? ` (${form.company})` : ""}`;
+    const body = [
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      form.company ? `Company: ${form.company}` : null,
+      "",
+      form.message,
+    ]
+      .filter((line) => line !== null)
+      .join("\n");
+    window.location.href = `mailto:${siteInfo.enquiryEmail}?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
     setForm(initialState);
   };
@@ -65,7 +79,14 @@ export default function Contact() {
                   <p className="font-heading text-base font-semibold text-forest-dark">
                     Address
                   </p>
-                  <p className="font-body text-sm text-brown/85">{siteInfo.address}</p>
+                  <a
+                    href={siteInfo.mapsUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-body text-sm text-brown/85 underline-offset-2 hover:text-forest hover:underline"
+                  >
+                    {siteInfo.address}
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -74,7 +95,11 @@ export default function Contact() {
                   <p className="font-heading text-base font-semibold text-forest-dark">
                     Phone
                   </p>
-                  <p className="font-body text-sm text-brown/85">{siteInfo.phone}</p>
+                  {siteInfo.phones.map((p) => (
+                    <p key={p} className="font-body text-sm text-brown/85">
+                      {p}
+                    </p>
+                  ))}
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -83,7 +108,11 @@ export default function Contact() {
                   <p className="font-heading text-base font-semibold text-forest-dark">
                     Email
                   </p>
-                  <p className="font-body text-sm text-brown/85">{siteInfo.email}</p>
+                  {siteInfo.emails.map((e) => (
+                    <p key={e} className="font-body text-sm text-brown/85">
+                      {e}
+                    </p>
+                  ))}
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -105,7 +134,7 @@ export default function Contact() {
             <div className="mt-8 overflow-hidden rounded-xl border border-brown/10 shadow-sm">
               <iframe
                 title="Supracious location map"
-                src="https://www.google.com/maps?q=India&output=embed"
+                src={siteInfo.mapsEmbedUrl}
                 width="100%"
                 height="280"
                 style={{ border: 0 }}

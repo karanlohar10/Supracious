@@ -4,9 +4,19 @@ export const siteInfo = {
   name: "Supracious",
   legalName: "Supracious Exim Pvt Ltd",
   tagline: "Delivering Nature's Finest to the World",
-  email: "info@supracious.com",
-  phone: "+91-XXXXXXXXXX",
-  address: "(To be updated)",
+  motto: "Trusted Purity, Beyond Borders",
+  email: "info.supracious@gmail.com",
+  emails: [
+    "info.supracious@gmail.com",
+    "pratibhas1820@gmail.com",
+    "drsunilrayat@gmail.com",
+  ],
+  enquiryEmail: "pratibhas1820@gmail.com",
+  phone: "+91-8766593708",
+  phones: ["+91-8766593708", "+91-9890967352"],
+  address: "Chafal, Maharashtra 415520",
+  mapsUrl: "https://maps.app.goo.gl/GyPvRJN5nkTaPcVr8",
+  mapsEmbedUrl: "https://www.google.com/maps?q=17.3978207,74.0204411&output=embed",
   hours: ["Monday – Saturday", "9:00 AM – 6:00 PM"],
   website: "www.supracious.com",
 };
@@ -14,7 +24,6 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
-  { label: "Manufacturing", to: "/manufacturing" },
   { label: "Exports", to: "/exports" },
   { label: "Quality Assurance", to: "/quality-assurance" },
   { label: "Contact Us", to: "/contact" },
@@ -26,6 +35,7 @@ export const productRange = [
   "Spice Blends",
   "Pulses",
   "Cereals",
+  "Agricultural Products",
   "Customized Packaging Solutions",
 ];
 
@@ -40,8 +50,6 @@ export const whyChooseUs = [
 ];
 
 export const certifications = [
-  { title: "ISO 22000", desc: "Food Safety Management System" },
-  { title: "HACCP Certified", desc: "Hazard Analysis & Critical Control Points" },
   { title: "FSSAI Licensed", desc: "Food Safety and Standards Authority of India" },
   { title: "APEDA Registered", desc: "Agricultural & Processed Food Products Export" },
   { title: "Spices Board of India", desc: "Registered Exporter" },
@@ -75,50 +83,6 @@ export const cateredTo = [
   "Food Processing Companies",
   "Restaurants",
   "Hospitality Industry",
-];
-
-export const manufacturingProcess = [
-  "Procurement of raw materials",
-  "Cleaning and Sorting",
-  "Grading",
-  "Processing and Grinding",
-  "Quality Inspection",
-  "Packaging",
-  "Storage",
-  "Dispatch for Export",
-];
-
-export const infrastructure = [
-  "Modern Cleaning Machines",
-  "Automatic Grading Systems",
-  "Grinding and Blending Units",
-  "Hygienic Packaging Lines",
-  "Quality Testing Laboratory",
-  "Temperature-Controlled Storage",
-  "Export Ready Warehousing",
-];
-
-export const qualityControlSteps = [
-  "Raw material inspection",
-  "Moisture testing",
-  "Purity checks",
-  "Foreign particle removal",
-  "Microbiological testing (where applicable)",
-  "Batch traceability",
-  "Final packaging inspection",
-];
-
-export const storageGuidelines = [
-  "Store in a cool, dry place.",
-  "Protect from direct sunlight.",
-  "Keep containers tightly sealed after opening.",
-  "Maintain low humidity to preserve freshness.",
-];
-
-export const shelfLife = [
-  { product: "Whole Spices", life: "18–24 Months" },
-  { product: "Ground Spices", life: "12–18 Months" },
-  { product: "Pulses & Cereals", life: "12–24 Months" },
 ];
 
 export const exportCountries = [
