@@ -84,8 +84,8 @@ export const founders = [
   {
     name: "Dr. Sunil Jadhav",
     role: "Co-Founder & Director",
-    qualification: "M.Sc. Analytical Chemistry, Ph.D. in Chemistry",
-    bio: "A dedicated researcher with an M.Sc. in Analytical Chemistry and a Ph.D. in Chemistry, Dr. Sunil Jadhav brings a scientist's precision and rigor to every batch we source, test, and export — turning laboratory-grade quality control into a business promise.",
+    qualification: "M.Sc., Ph.D. in Chemistry",
+    bio: "A dedicated researcher with an M.Sc. and Ph.D. in Chemistry, Dr. Sunil Jadhav brings a scientist's precision and rigor to every batch we source, test, and export — turning laboratory-grade quality control into a business promise.",
   },
   {
     name: "Pratibha Sutar",
