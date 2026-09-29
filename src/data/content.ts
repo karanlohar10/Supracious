@@ -90,8 +90,8 @@ export const founders = [
   {
     name: "Pratibha Sutar",
     role: "Co-Founder & Director",
-    qualification: "M.Sc. Chemistry, Analytical Chemist",
-    bio: "An M.Sc. Chemistry graduate, Analytical Chemist, and Dr. Jadhav's former student, Pratibha Sutar pairs deep scientific grounding with a sharp business sense, ensuring every shipment meets the same exacting standards it was researched to achieve.",
+    qualification: "M.Sc. Chemistry, M.Sc. Analytical Chemistry",
+    bio: "An M.Sc. in Chemistry and Analytical Chemistry, and Dr. Jadhav's former student, Pratibha Sutar pairs deep scientific grounding with a sharp business sense, ensuring every shipment meets the same exacting standards it was researched to achieve.",
   },
 ];
 
