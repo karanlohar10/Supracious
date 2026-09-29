@@ -18,7 +18,7 @@ export const siteInfo = {
   address: "Chafal, Maharashtra 415520",
   mapsUrl: "https://maps.app.goo.gl/GyPvRJN5nkTaPcVr8",
   mapsEmbedUrl: "https://www.google.com/maps?q=17.3978207,74.0204411&output=embed",
-  hours: ["Monday – Saturday", "9:00 AM – 6:00 PM"],
+  hours: ["Available 24 Hours"],
   website: "www.supracious.com",
 };
 
