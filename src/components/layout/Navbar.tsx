@@ -42,7 +42,7 @@ export function Navbar() {
               )}
             >
               {siteInfo.name}
-              <sup className="relative -top-[0.26em] ml-0.5 text-[0.55em] font-normal">
+              <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                 &trade;
               </sup>
             </span>
@@ -114,7 +114,7 @@ export function Navbar() {
                   className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
                 />
                 {siteInfo.name}
-                <sup className="relative -top-[0.26em] ml-0.5 text-[0.55em] font-normal">
+                <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                   &trade;
                 </sup>
               </span>

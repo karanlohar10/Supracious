@@ -17,7 +17,7 @@ export function Footer() {
             <div>
               <h3 className="font-heading text-2xl font-bold text-ivory">
                 {siteInfo.name}
-                <sup className="relative -top-[0.26em] ml-0.5 text-[0.55em] font-normal">
+                <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                   &trade;
                 </sup>
               </h3>
