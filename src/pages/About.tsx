@@ -11,7 +11,8 @@ import {
   foundersTaglines,
 } from "@/data/content";
 import heroAbout from "@/assets/hero/about.jpg";
-import { Factory, FlaskConical, GraduationCap, Quote } from "lucide-react";
+import { Factory, GraduationCap, Quote } from "lucide-react";
+import sunilJadhavPhoto from "@/assets/founders/dr-sunil-jadhav.webp";
 
 export default function About() {
   return (
@@ -54,7 +55,11 @@ export default function About() {
             <Reveal key={founder.name} delay={idx * 80}>
               <div className="h-full rounded-xl border border-forest/15 bg-ivory p-6 text-center shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
                 {idx === 0 ? (
-                  <FlaskConical className="mx-auto text-forest" size={36} />
+                  <img
+                    src={sunilJadhavPhoto}
+                    alt={founder.name}
+                    className="mx-auto h-24 w-24 rounded-full border-4 border-gold/30 object-cover shadow-sm"
+                  />
                 ) : (
                   <GraduationCap className="mx-auto text-forest" size={36} />
                 )}
