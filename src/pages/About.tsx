@@ -2,9 +2,16 @@ import { HeroBanner } from "@/components/layout/HeroBanner";
 import { Section } from "@/components/layout/Section";
 import { CheckList } from "@/components/layout/CheckList";
 import { Reveal } from "@/components/layout/Reveal";
-import { scopeOfBusiness, cateredTo, founders, foundersIntro } from "@/data/content";
+import {
+  scopeOfBusiness,
+  cateredTo,
+  founders,
+  foundersIntro,
+  foundersPledge,
+  foundersTaglines,
+} from "@/data/content";
 import heroAbout from "@/assets/hero/about.jpg";
-import { Factory, FlaskConical, GraduationCap } from "lucide-react";
+import { Factory, FlaskConical, GraduationCap, Quote } from "lucide-react";
 
 export default function About() {
   return (
@@ -31,6 +38,18 @@ export default function About() {
         description="Supracious was born at the intersection of chemistry and commerce — founded by a researcher and his student, both committed to bringing lab-grade precision to every export."
         tone="forest"
       >
+        {/* Eye-catching brand taglines */}
+        <Reveal className="mb-10 flex flex-wrap justify-center gap-4">
+          {foundersTaglines.map((tagline) => (
+            <span
+              key={tagline}
+              className="rounded-full bg-gold px-6 py-2 font-heading text-base font-bold tracking-wide text-forest-dark shadow-md sm:text-lg"
+            >
+              {tagline}
+            </span>
+          ))}
+        </Reveal>
+
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
           {founders.map((founder, idx) => (
             <Reveal key={founder.name} delay={idx * 80}>
@@ -49,6 +68,9 @@ export default function About() {
                 <p className="font-body text-xs tracking-wide text-brown/70">
                   {founder.qualification}
                 </p>
+                <span className="mt-2 inline-block rounded-full bg-forest/10 px-3 py-1 font-body text-xs font-semibold uppercase tracking-wide text-forest">
+                  {founder.specialty}
+                </span>
                 <p className="mt-3 font-body text-sm leading-relaxed text-brown/90">
                   {founder.bio}
                 </p>
@@ -56,6 +78,14 @@ export default function About() {
             </Reveal>
           ))}
         </div>
+
+        {/* Shared founders' pledge */}
+        <Reveal className="mx-auto mt-14 max-w-2xl text-center">
+          <Quote className="mx-auto text-gold" size={32} />
+          <p className="mt-3 font-heading text-xl font-semibold italic leading-snug text-ivory sm:text-2xl">
+            {foundersPledge}
+          </p>
+        </Reveal>
       </Section>
 
       {/* Scope of Business */}

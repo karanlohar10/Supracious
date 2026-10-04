@@ -50,8 +50,17 @@ src/
   pages/             # one component per route
 ```
 
+## Deployment
+
+- Hosted on **Vercel**. Since this is a client-side routed SPA (React Router `BrowserRouter`), a
+  `vercel.json` rewrite (`/(.*) → /index.html`) is required at the repo root so direct navigation
+  or refreshes on routes like `/about` are served `index.html` instead of a 404.
+
 ## Notes
 
 - The contact form is front-end only (client-side validation + success state). Wire it to a real backend
   or service (e.g., Formspree, EmailJS) before production use.
 - Contact details (address/phone) are placeholders pending official company information.
+- Favicon assets (`favicon.ico`, `favicon-*.png`, `apple-touch-icon.png`) are generated from the
+  ship/globe/plane mark cropped out of the full logo. After changing favicons, allow time for
+  Google to re-crawl/re-index — resubmit the URL in Google Search Console to speed this up.

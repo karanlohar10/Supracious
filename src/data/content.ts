@@ -85,14 +85,24 @@ export const founders = [
     name: "Dr. Sunil Jadhav",
     role: "Co-Founder & Director",
     qualification: "M.Sc., Ph.D. in Chemistry",
+    specialty: "Analytical & Quality Research Chemistry",
     bio: "A dedicated researcher with an M.Sc. and Ph.D. in Chemistry, Dr. Sunil Jadhav brings a scientist's precision and rigor to every batch we source, test, and export — turning laboratory-grade quality control into a business promise.",
   },
   {
     name: "Pratibha Sutar",
     role: "Co-Founder & Director",
     qualification: "M.Sc. Analytical Chemistry",
+    specialty: "Food Purity Characterization & Analysis",
     bio: "An M.Sc. in Analytical Chemistry and Dr. Jadhav's former student, Pratibha Sutar pairs deep scientific grounding with a sharp business sense, ensuring every shipment meets the same exacting standards it was researched to achieve.",
   },
+];
+
+export const foundersPledge =
+  "We are dedicated to delivering adulterant-free food, trusted beyond borders.";
+
+export const foundersTaglines = [
+  "By Careful Analysis...!",
+  "Your Scientific Trusted Partners!",
 ];
 
 export const cateredTo = [

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Globe } from "lucide-react";
 import { navLinks, siteInfo } from "@/data/content";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-mark.jpg";
 
 export function Footer() {
   return (

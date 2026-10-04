@@ -11,6 +11,7 @@ import {
   certifications,
   highlights,
   siteInfo,
+  foundersTaglines,
 } from "@/data/content";
 import heroHome from "@/assets/hero/home.jpg";
 import { ShieldCheck, Sparkles } from "lucide-react";
@@ -25,6 +26,9 @@ export default function Home() {
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif
       >
+        <span className="mb-4 inline-block rounded-full bg-gold px-5 py-2 font-heading text-sm font-bold tracking-wide text-forest-dark shadow-md sm:text-base">
+          {foundersTaglines[1]}
+        </span>
         <div className="mt-8 flex flex-wrap gap-4">
           <Button asChild size="lg" className="rounded-full bg-gold text-forest-dark hover:bg-gold-light">
             <Link to="/contact">Request a Quote</Link>

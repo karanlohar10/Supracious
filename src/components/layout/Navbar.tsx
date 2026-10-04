@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/s
 import { Button } from "@/components/ui/button";
 import { navLinks, siteInfo } from "@/data/content";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo-mark.jpg";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -111,6 +111,9 @@ export function Navbar() {
                   className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
                 />
                 {siteInfo.name}
+              </span>
+              <span className="font-body text-[10px] font-normal uppercase tracking-[0.3em] text-gold">
+                Exim Pvt Ltd
               </span>
               <span className="font-body text-xs font-normal text-brown/70">
                 {siteInfo.motto}
