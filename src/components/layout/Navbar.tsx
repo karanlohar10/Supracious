@@ -42,6 +42,9 @@ export function Navbar() {
               )}
             >
               {siteInfo.name}
+              <sup className="relative -top-[0.26em] ml-0.5 text-[0.55em] font-normal">
+                &trade;
+              </sup>
             </span>
             <span
               className={cn(
@@ -111,6 +114,9 @@ export function Navbar() {
                   className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
                 />
                 {siteInfo.name}
+                <sup className="relative -top-[0.26em] ml-0.5 text-[0.55em] font-normal">
+                  &trade;
+                </sup>
               </span>
               <span className="font-body text-[10px] font-normal uppercase tracking-[0.3em] text-gold">
                 Exim Pvt Ltd
