@@ -53,17 +53,17 @@ export function HeroBanner({
         </svg>
       )}
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 pt-28 sm:px-10 sm:pt-0">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 pt-28 sm:px-10 sm:pt-0">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-xl"
+          className="w-full max-w-xl"
         >
           {tagline && (
-            <p className="mb-4 flex items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.24em] text-gold-light sm:text-sm">
+            <p className="mb-4 flex min-w-0 items-start gap-3 font-body text-xs font-semibold uppercase tracking-[0.24em] text-gold-light sm:items-center sm:text-sm">
               <span className="h-px w-8 bg-gold" aria-hidden="true" />
-              {tagline}
+              <span className="min-w-0 break-words leading-relaxed">{tagline}</span>
             </p>
           )}
           {eyebrow && (

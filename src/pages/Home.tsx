@@ -26,9 +26,9 @@ export default function Home() {
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif
       >
-        <p className="mt-6 flex items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-light sm:text-sm">
+        <p className="mt-6 flex min-w-0 items-start gap-3 font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-light sm:items-center sm:text-sm">
           <span className="h-px w-6 bg-gold" aria-hidden="true" />
-          {foundersTaglines[1]}
+          <span className="min-w-0 break-words leading-relaxed">{foundersTaglines[1]}</span>
         </p>
         <div className="mt-7 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <Button
