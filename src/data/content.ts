@@ -25,6 +25,7 @@ export const siteInfo = {
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "About Us", to: "/about" },
+  { label: "Products", to: "/products" },
   { label: "Exports", to: "/exports" },
   { label: "Quality Assurance", to: "/quality-assurance" },
   { label: "Contact Us", to: "/contact" },
@@ -38,6 +39,37 @@ export const productRange = [
   "Cereals",
   "Agricultural Products",
   "Customized Packaging Solutions",
+];
+
+export const productsIntro =
+  "Quality Indian agricultural products, sourced with care and prepared for global markets.";
+
+export const products = [
+  {
+    name: "Whole Dried Turmeric",
+    description:
+      "Premium whole dried turmeric rhizomes selected for quality, colour and aroma.",
+  },
+  {
+    name: "Turmeric Powder",
+    description:
+      "Finely processed turmeric powder with vibrant colour and characteristic aroma.",
+  },
+  {
+    name: "Fresh & Dried Ginger",
+    description:
+      "Quality fresh and dried ginger suitable for food, processing and export applications.",
+  },
+  {
+    name: "Capsicum Varieties",
+    description:
+      "A selection of quality capsicum varieties with consistent appearance and freshness.",
+  },
+  {
+    name: "Chilly",
+    description:
+      "Quality chilly varieties selected for colour, flavour and heat.",
+  },
 ];
 
 export const whyChooseUs = [
