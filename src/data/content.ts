@@ -98,7 +98,7 @@ export const founders = [
 ];
 
 export const foundersPledge =
-  "We are dedicated to delivering adulterant-free food, trusted beyond borders.";
+  "WE ARE DEDICATED TO DELIVERING ADULTERANT-FREE FOOD, TRUSTED BEYOND BORDERS.";
 
 export const foundersTaglines = [
   "By Careful Analysis...!",

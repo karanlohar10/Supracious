@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 interface HeroBannerProps {
   image: string;
   eyebrow?: string;
+  /** Optional short accent line rendered above the title (styled as text, not a button). */
+  tagline?: string;
   title: string;
   subtitle?: string;
   children?: ReactNode;
@@ -18,6 +20,7 @@ interface HeroBannerProps {
 export function HeroBanner({
   image,
   eyebrow,
+  tagline,
   title,
   subtitle,
   children,
@@ -57,6 +60,12 @@ export function HeroBanner({
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-xl"
         >
+          {tagline && (
+            <p className="mb-4 flex items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.24em] text-gold-light sm:text-sm">
+              <span className="h-px w-8 bg-gold" aria-hidden="true" />
+              {tagline}
+            </p>
+          )}
           {eyebrow && (
             <p className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.25em] text-gold">
               {eyebrow}

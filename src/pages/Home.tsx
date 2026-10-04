@@ -26,10 +26,11 @@ export default function Home() {
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif
       >
-        <span className="mb-4 inline-block rounded-full bg-gold px-5 py-2 font-heading text-sm font-bold tracking-wide text-forest-dark shadow-md sm:text-base">
+        <p className="mt-6 flex items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-light sm:text-sm">
+          <span className="h-px w-6 bg-gold" aria-hidden="true" />
           {foundersTaglines[1]}
-        </span>
-        <div className="mt-8 flex flex-wrap gap-4">
+        </p>
+        <div className="mt-7 flex flex-wrap gap-4">
           <Button asChild size="lg" className="rounded-full bg-gold text-forest-dark hover:bg-gold-light">
             <Link to="/contact">Request a Quote</Link>
           </Button>

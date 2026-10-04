@@ -39,15 +39,14 @@ export default function About() {
         tone="forest"
       >
         {/* Eye-catching brand taglines */}
-        <Reveal className="mb-10 flex flex-wrap justify-center gap-4">
-          {foundersTaglines.map((tagline) => (
-            <span
-              key={tagline}
-              className="rounded-full bg-gold px-6 py-2 font-heading text-base font-bold tracking-wide text-forest-dark shadow-md sm:text-lg"
-            >
-              {tagline}
-            </span>
-          ))}
+        <Reveal className="mb-10 flex flex-col items-center justify-center gap-5 text-center sm:flex-row sm:gap-8">
+          <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-ivory/85 sm:text-sm">
+            {foundersTaglines[1]}
+          </p>
+          <span className="hidden h-8 w-px bg-gold/50 sm:block" aria-hidden="true" />
+          <p className="font-body text-xs font-semibold uppercase tracking-[0.2em] text-ivory/85 sm:text-sm">
+            {foundersTaglines[0]}
+          </p>
         </Reveal>
 
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
@@ -82,7 +81,7 @@ export default function About() {
         {/* Shared founders' pledge */}
         <Reveal className="mx-auto mt-14 max-w-2xl text-center">
           <Quote className="mx-auto text-gold" size={32} />
-          <p className="mt-3 font-heading text-xl font-semibold italic leading-snug text-ivory sm:text-2xl">
+          <p className="mt-3 font-heading text-xl leading-snug text-ivory sm:text-2xl">
             {foundersPledge}
           </p>
         </Reveal>
