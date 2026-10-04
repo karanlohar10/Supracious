@@ -30,15 +30,19 @@ export default function Home() {
           <span className="h-px w-6 bg-gold" aria-hidden="true" />
           {foundersTaglines[1]}
         </p>
-        <div className="mt-7 flex flex-wrap gap-4">
-          <Button asChild size="lg" className="rounded-full bg-gold text-forest-dark hover:bg-gold-light">
+        <div className="mt-7 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+          <Button
+            asChild
+            size="lg"
+            className="w-full rounded-full bg-gold text-forest-dark hover:bg-gold-light sm:w-auto"
+          >
             <Link to="/contact">Request a Quote</Link>
           </Button>
           <Button
             asChild
             size="lg"
             variant="outline"
-            className="rounded-full border-ivory/60 bg-transparent text-ivory hover:bg-ivory/10 hover:text-ivory"
+            className="w-full rounded-full border-ivory/60 bg-transparent text-ivory hover:bg-ivory/10 hover:text-ivory sm:w-auto"
           >
             <Link to="/about">Discover Our Story</Link>
           </Button>
