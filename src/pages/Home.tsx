@@ -12,9 +12,18 @@ import {
   highlights,
   siteInfo,
   foundersTaglines,
+  comingSoon,
+  comingSoonIntro,
 } from "@/data/content";
 import heroHome from "@/assets/hero/home.jpg";
+import foodSoilTestingLaboratory from "@/assets/coming-soon/food-soil-testing-laboratory.jpg";
+import soilMicronutrientSolutions from "@/assets/coming-soon/soil-micronutrient-solutions.jpg";
 import { ShieldCheck, Sparkles } from "lucide-react";
+
+const comingSoonImages: Record<string, string> = {
+  "Food & Soil Testing Laboratory": foodSoilTestingLaboratory,
+  "Soil Micronutrient Solutions": soilMicronutrientSolutions,
+};
 
 export default function Home() {
   return (
@@ -137,6 +146,41 @@ export default function Home() {
                 <p className="font-heading text-lg font-semibold text-gold-light">
                   {item}
                 </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
+      {/* Coming Soon */}
+      <Section
+        eyebrow="Coming Soon"
+        title="Coming Soon"
+        description={comingSoonIntro}
+        tone="white"
+      >
+        <div className="grid gap-8 sm:grid-cols-2">
+          {comingSoon.map((item, idx) => (
+            <Reveal key={item.name} delay={idx * 100}>
+              <div className="group h-full overflow-hidden rounded-2xl border border-forest/15 bg-white shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <img
+                    src={comingSoonImages[item.name]}
+                    alt={item.name}
+                    className="h-full w-full object-cover"
+                  />
+                  <Badge className="absolute left-4 top-4 rounded-full border-none bg-gold px-4 py-1.5 font-body text-xs font-semibold uppercase tracking-wide text-forest-dark shadow-sm">
+                    Coming Soon
+                  </Badge>
+                </div>
+                <div className="p-7 text-center sm:p-8">
+                  <h3 className="font-heading text-2xl font-semibold text-forest-dark">
+                    {item.name}
+                  </h3>
+                  <p className="mt-3 font-body text-base leading-relaxed text-brown/90">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </Reveal>
           ))}

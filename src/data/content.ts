@@ -98,6 +98,22 @@ export const highlights = [
   "Reliable Global Logistics Network",
 ];
 
+export const comingSoonIntro =
+  "Building capabilities for quality, science and sustainable agriculture.";
+
+export const comingSoon = [
+  {
+    name: "Food & Soil Testing Laboratory",
+    description:
+      "Laboratory testing services focused on food quality, soil health and agricultural analysis.",
+  },
+  {
+    name: "Soil Micronutrient Solutions",
+    description:
+      "Quality micronutrient products designed to support soil health and crop nutrition.",
+  },
+];
+
 export const scopeOfBusiness = [
   "Procurement from certified farmers",
   "Cleaning and grading",
