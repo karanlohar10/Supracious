@@ -31,7 +31,7 @@ export function Navbar() {
         <Link to="/" className="flex items-center gap-3">
           <img
             src={logo}
-            alt={`${siteInfo.name} logo`}
+            alt={`${siteInfo.name} Exim trademark logo`}
             className="h-12 w-12 shrink-0 rounded-full bg-ivory object-contain sm:h-14 sm:w-14"
           />
           <div className="flex flex-col gap-1">
@@ -41,7 +41,7 @@ export function Navbar() {
                 scrolled ? "text-forest" : "text-ivory",
               )}
             >
-              {siteInfo.name}
+              {siteInfo.name} Exim
               <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                 &trade;
               </sup>
@@ -52,7 +52,7 @@ export function Navbar() {
                 scrolled ? "text-brown" : "text-gold-light",
               )}
             >
-              Exim Pvt Ltd
+              Pvt Ltd
             </span>
             <span
               className={cn(
@@ -110,16 +110,16 @@ export function Navbar() {
               <span className="flex items-center gap-3">
                 <img
                   src={logo}
-                  alt={`${siteInfo.name} logo`}
+                  alt={`${siteInfo.name} Exim trademark logo`}
                   className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
                 />
-                {siteInfo.name}
+                {siteInfo.name} Exim
                 <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                   &trade;
                 </sup>
               </span>
               <span className="font-body text-[10px] font-normal uppercase tracking-[0.3em] text-gold">
-                Exim Pvt Ltd
+                Pvt Ltd
               </span>
               <span className="font-body text-xs font-normal text-brown/70">
                 {siteInfo.motto}

@@ -11,18 +11,18 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <img
               src={logo}
-              alt={`${siteInfo.name} logo`}
+              alt={`${siteInfo.name} Exim trademark logo`}
               className="h-12 w-12 shrink-0 rounded-full bg-ivory object-contain"
             />
             <div>
               <h3 className="font-heading text-2xl font-bold text-ivory">
-                {siteInfo.name}
+                {siteInfo.name} Exim
                 <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
                   &trade;
                 </sup>
               </h3>
               <p className="mt-1 font-body text-xs uppercase tracking-[0.3em] text-gold-light">
-                Exim Pvt Ltd
+                Pvt Ltd
               </p>
               <p className="mt-1 font-body text-xs text-ivory/70">
                 {siteInfo.motto}
