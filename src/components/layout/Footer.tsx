@@ -22,7 +22,7 @@ export function Footer() {
                 </sup>
               </h3>
               <p className="mt-1 font-body text-xs uppercase tracking-[0.3em] text-gold-light">
-                Pvt Ltd
+                Private Limited
               </p>
               <p className="mt-1 font-body text-xs text-ivory/70">
                 {siteInfo.motto}

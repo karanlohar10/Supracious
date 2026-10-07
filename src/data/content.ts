@@ -2,7 +2,7 @@
 
 export const siteInfo = {
   name: "Supracious",
-  legalName: "Supracious Exim Pvt Ltd",
+  legalName: "Supracious Exim Private Limited",
   tagline: "Delivering Nature's Finest to the World",
   motto: "Trusted Purity, Beyond Borders",
   email: "info.supracious@gmail.com",

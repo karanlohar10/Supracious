@@ -30,7 +30,7 @@ export default function Home() {
     <>
       <HeroBanner
         image={heroHome}
-        eyebrow="Supracious Exim Pvt Ltd"
+        eyebrow="Supracious Exim Private Limited"
         title="Delivering Nature's Finest to the World"
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif

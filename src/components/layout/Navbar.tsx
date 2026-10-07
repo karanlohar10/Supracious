@@ -52,7 +52,7 @@ export function Navbar() {
                 scrolled ? "text-brown" : "text-gold-light",
               )}
             >
-              Pvt Ltd
+              Private Limited
             </span>
             <span
               className={cn(
@@ -121,7 +121,7 @@ export function Navbar() {
                 </span>
               </span>
               <span className="font-body text-[10px] font-normal uppercase tracking-[0.3em] text-gold">
-                Pvt Ltd
+                Private Limited
               </span>
               <span className="font-body text-xs font-normal text-brown/70">
                 {siteInfo.motto}
