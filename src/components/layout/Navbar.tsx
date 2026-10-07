@@ -113,10 +113,12 @@ export function Navbar() {
                   alt={`${siteInfo.name} Exim trademark logo`}
                   className="h-10 w-10 shrink-0 rounded-full bg-ivory object-contain"
                 />
-                {siteInfo.name} Exim
-                <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
-                  &trade;
-                </sup>
+                <span>
+                  {siteInfo.name} Exim
+                  <sup className="relative -top-[0.45em] ml-0.5 text-[0.55em] font-normal">
+                    &trade;
+                  </sup>
+                </span>
               </span>
               <span className="font-body text-[10px] font-normal uppercase tracking-[0.3em] text-gold">
                 Pvt Ltd
