@@ -44,31 +44,85 @@ export const productRange = [
 export const productsIntro =
   "Quality Indian agricultural products, sourced with care and prepared for global markets.";
 
-export const products = [
+export type ProductCategory = "Spices & Vegetables" | "Cereals & Pulses";
+
+export interface Product {
+  readonly name: string;
+  readonly category: ProductCategory;
+  readonly description: string;
+}
+
+export const productCategories: readonly ProductCategory[] = [
+  "Spices & Vegetables",
+  "Cereals & Pulses",
+];
+
+export const products: readonly Product[] = [
   {
     name: "Whole Dried Turmeric",
+    category: "Spices & Vegetables",
     description:
       "Premium whole dried turmeric rhizomes selected for quality, colour and aroma.",
   },
   {
     name: "Turmeric Powder",
+    category: "Spices & Vegetables",
     description:
       "Finely processed turmeric powder with vibrant colour and characteristic aroma.",
   },
   {
     name: "Fresh & Dried Ginger",
+    category: "Spices & Vegetables",
     description:
       "Quality fresh and dried ginger suitable for food, processing and export applications.",
   },
   {
     name: "Capsicum Varieties",
+    category: "Spices & Vegetables",
     description:
       "A selection of quality capsicum varieties with consistent appearance and freshness.",
   },
   {
     name: "Chilly",
+    category: "Spices & Vegetables",
     description:
       "Quality chilly varieties selected for colour, flavour and heat.",
+  },
+  {
+    name: "Puffed Rice",
+    category: "Cereals & Pulses",
+    description:
+      "Rice grains expanded by heat and pressure into light, airy, hollow kernels. Widely used in snacks such as bhel, breakfast cereals and ready-to-eat foods.",
+  },
+  {
+    name: "Popped Rice / Parched Rice",
+    category: "Cereals & Pulses",
+    description:
+      "Rice grains roasted until they pop into crisp, lightly toasted kernels. Eaten as a snack and used in traditional sweets and festive preparations.",
+  },
+  {
+    name: "Beaten Rice / Rice Flakes",
+    category: "Cereals & Pulses",
+    description:
+      "Parboiled rice that is flattened into thin, light flakes, also known as poha. Cooks within minutes and is used in breakfast dishes and snacks.",
+  },
+  {
+    name: "Thick Flattened Rice",
+    category: "Cereals & Pulses",
+    description:
+      "Rice pressed into thicker, sturdier flakes that hold their shape when soaked or fried. Used in chivda, snack mixes and traditional preparations.",
+  },
+  {
+    name: "Maize / Corn",
+    category: "Cereals & Pulses",
+    description:
+      "Maize (Zea mays) is a cereal grain harvested, dried and graded for size and moisture. Used for food, starch, animal feed and further processing.",
+  },
+  {
+    name: "Split Bengal Gram / Chick Peas",
+    category: "Cereals & Pulses",
+    description:
+      "Chickpeas (chana) that are hulled and split into dal. Used in curries, ground into besan flour and in snack production.",
   },
 ];
 
