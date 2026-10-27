@@ -51,3 +51,4 @@ Cropped to 4:3 and resized from Wikimedia Commons originals.
 | matki-moth-beans.jpg | File:Matki.JPG (https://commons.wikimedia.org/wiki/File:Matki.JPG) | Lalitstar at English Wikipedia | CC BY-SA 3.0 |
 | chawli-lobia.jpg | File:Seeds of Vigna unguiculata.jpg (https://commons.wikimedia.org/wiki/File:Seeds_of_Vigna_unguiculata.jpg) | Gaurav Dhwaj Khadka | CC BY 4.0 |
 | rajma.jpg | File:Red kidney beans.jpg (https://commons.wikimedia.org/wiki/File:Red_kidney_beans.jpg) | Fumikas Sagisavas | CC0 |
+| kolam-rice.jpg, indrayani-rice.jpg, ambemohar-rice.jpg | Supplied by the site owner | - | - |
