@@ -27,7 +27,7 @@ export function HeroBanner({
   showGlobalMotif = false,
 }: HeroBannerProps) {
   return (
-    <section className="relative h-[70vh] min-h-[520px] max-h-[700px] w-full overflow-hidden sm:min-h-[420px]">
+    <section className="relative flex min-h-[min(70vh,700px)] w-full overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
@@ -53,7 +53,7 @@ export function HeroBanner({
         </svg>
       )}
 
-      <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-4 pt-28 sm:px-10 sm:pt-0">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-4 pb-12 pt-32 sm:px-10">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

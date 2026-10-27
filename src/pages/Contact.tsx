@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { HeroBanner } from "@/components/layout/HeroBanner";
 import { Section } from "@/components/layout/Section";
 import { Reveal } from "@/components/layout/Reveal";
@@ -20,7 +21,12 @@ interface FormState {
 const initialState: FormState = { name: "", email: "", company: "", message: "" };
 
 export default function Contact() {
-  const [form, setForm] = useState<FormState>(initialState);
+  const [searchParams] = useSearchParams();
+  const product = searchParams.get("product");
+  const [form, setForm] = useState<FormState>(() => ({
+    ...initialState,
+    message: product ? `I would like a quote for ${product}.` : "",
+  }));
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [submitted, setSubmitted] = useState(false);
 
