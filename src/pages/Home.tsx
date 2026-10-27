@@ -5,6 +5,7 @@ import { CheckList } from "@/components/layout/CheckList";
 import { Reveal } from "@/components/layout/Reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { ComingSoonMarquee } from "@/components/home/ComingSoonMarquee";
 import {
   productRange,
   whyChooseUs,
@@ -56,6 +57,8 @@ export default function Home() {
           </Button>
         </div>
       </HeroBanner>
+
+      <ComingSoonMarquee />
 
       {/* Welcome */}
       <Section

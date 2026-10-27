@@ -15,6 +15,7 @@ export const siteInfo = {
   enquiryCcEmails: ["info.supracious@gmail.com", "drsunilrayat@gmail.com"],
   phone: "+91-8766593708",
   phones: ["+91-8766593708", "+91-9890967352"],
+  contactNumber: "+91-9890967352",
   address: "Chafal, Maharashtra 415520",
   mapsUrl: "https://maps.app.goo.gl/GyPvRJN5nkTaPcVr8",
   mapsEmbedUrl: "https://www.google.com/maps?q=17.3978207,74.0204411&output=embed",

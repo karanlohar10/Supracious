@@ -7,9 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { siteInfo } from "@/data/content";
+import { siteInfo, products } from "@/data/content";
 import heroContact from "@/assets/hero/contact.jpg";
-import { Mail, Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, CheckCircle2, MessageCircle } from "lucide-react";
+import { ContactChannels } from "@/components/contact/ContactChannels";
+import { inquiryTemplates, fillTemplate, mailLink, whatsappLink } from "@/lib/contact";
+import { cn } from "@/lib/utils";
 
 interface FormState {
   name: string;
@@ -22,13 +25,29 @@ const initialState: FormState = { name: "", email: "", company: "", message: "" 
 
 export default function Contact() {
   const [searchParams] = useSearchParams();
-  const product = searchParams.get("product");
+  const productParam = searchParams.get("product");
+  const [product, setProduct] = useState(productParam ?? "");
+  const [templateId, setTemplateId] = useState<string | null>(null);
   const [form, setForm] = useState<FormState>(() => ({
     ...initialState,
-    message: product ? `I would like a quote for ${product}.` : "",
+    message: productParam ? `I would like a quote for ${productParam}.` : "",
   }));
   const [errors, setErrors] = useState<Partial<FormState>>({});
   const [submitted, setSubmitted] = useState(false);
+
+  const applyTemplate = (id: string, nextProduct = product, nextForm = form) => {
+    const tpl = inquiryTemplates.find((t) => t.id === id);
+    if (!tpl) return;
+    setTemplateId(id);
+    setForm({ ...nextForm, message: fillTemplate(tpl.text, { ...nextForm, product: nextProduct }) });
+  };
+
+  const onProductChange = (value: string) => {
+    setProduct(value);
+    if (templateId) applyTemplate(templateId, value);
+  };
+
+  const quickSubject = `Inquiry${product ? ` - ${product}` : ""}${form.name ? ` from ${form.name}` : ""}`;
 
   const validate = (): boolean => {
     const nextErrors: Partial<FormState> = {};
@@ -65,6 +84,7 @@ export default function Contact() {
     ].join(",")}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setSubmitted(true);
     setForm(initialState);
+    setTemplateId(null);
   };
 
   return (
@@ -76,7 +96,10 @@ export default function Contact() {
         subtitle="We welcome inquiries from importers, distributors, wholesalers, and business partners across the world."
       />
 
-      <Section eyebrow="Get in Touch" title="Contact Details" tone="white">
+      <Section eyebrow="Get in Touch" title="Reach Us Your Way" tone="white">
+        <div className="mx-auto mb-14 max-w-3xl">
+          <ContactChannels message={form.message} />
+        </div>
         <div className="grid gap-10 lg:grid-cols-2">
           <Reveal>
             <div className="space-y-5">
@@ -215,6 +238,45 @@ export default function Contact() {
                     />
                   </div>
                   <div>
+                    <p className="font-body text-sm font-medium text-forest-dark">
+                      Quick templates
+                    </p>
+                    <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label="Message templates">
+                      {inquiryTemplates.map((t) => (
+                        <button
+                          key={t.id}
+                          type="button"
+                          aria-pressed={templateId === t.id}
+                          onClick={() => applyTemplate(t.id)}
+                          className={cn(
+                            "rounded-full border px-3 py-1.5 font-body text-xs font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest",
+                            templateId === t.id
+                              ? "border-forest bg-forest text-ivory"
+                              : "border-forest/25 bg-white text-forest-dark hover:border-gold hover:bg-gold/10",
+                          )}
+                        >
+                          {t.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <Label htmlFor="product">Product (optional)</Label>
+                    <select
+                      id="product"
+                      value={product}
+                      onChange={(e) => onProductChange(e.target.value)}
+                      className="mt-1 h-9 w-full rounded-md border border-input bg-transparent px-3 font-body text-sm focus-visible:outline-2 focus-visible:outline-forest"
+                    >
+                      <option value="">General inquiry</option>
+                      {products.map((p) => (
+                        <option key={p.name} value={p.name}>
+                          {p.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
@@ -234,6 +296,30 @@ export default function Contact() {
                   >
                     Submit Inquiry
                   </Button>
+                  <div className="flex flex-col gap-2 border-t border-brown/10 pt-4 sm:flex-row">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="flex-1 rounded-full border-forest/40 text-forest-dark"
+                    >
+                      <a
+                        href={whatsappLink(form.message)}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        <MessageCircle size={16} aria-hidden="true" /> Send via WhatsApp
+                      </a>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="flex-1 rounded-full border-forest/40 text-forest-dark"
+                    >
+                      <a href={mailLink(quickSubject, form.message)}>
+                        <Mail size={16} aria-hidden="true" /> Send via Email
+                      </a>
+                    </Button>
+                  </div>
                 </form>
               )}
             </div>
