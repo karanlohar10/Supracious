@@ -28,7 +28,6 @@ export default function Home() {
         title="Delivering Nature's Finest to the World"
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif
-        overlap
       >
         <p className="mt-6 min-w-0 font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-light sm:text-sm">
           <span className="min-w-0 break-words leading-relaxed">{foundersTaglines[1]}</span>
