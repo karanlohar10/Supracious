@@ -5,7 +5,7 @@ import { CheckList } from "@/components/layout/CheckList";
 import { Reveal } from "@/components/layout/Reveal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ComingSoonMarquee } from "@/components/home/ComingSoonMarquee";
+import { ComingSoonCards, comingSoonImages } from "@/components/home/ComingSoonCards";
 import {
   productRange,
   whyChooseUs,
@@ -17,14 +17,7 @@ import {
   comingSoonIntro,
 } from "@/data/content";
 import heroHome from "@/assets/hero/home.jpg";
-import foodSoilTestingLaboratory from "@/assets/coming-soon/food-soil-testing-laboratory.jpg";
-import soilMicronutrientSolutions from "@/assets/coming-soon/soil-micronutrient-solutions.jpg";
 import { ShieldCheck, Sparkles } from "lucide-react";
-
-const comingSoonImages: Record<string, string> = {
-  "Food & Soil Testing Laboratory": foodSoilTestingLaboratory,
-  "Soil Micronutrient Solutions": soilMicronutrientSolutions,
-};
 
 export default function Home() {
   return (
@@ -35,6 +28,7 @@ export default function Home() {
         title="Delivering Nature's Finest to the World"
         subtitle="Premium Indian spices, pulses, cereals and agricultural products, exported with trust across the globe."
         showGlobalMotif
+        overlap
       >
         <p className="mt-6 min-w-0 font-body text-xs font-semibold uppercase tracking-[0.2em] text-gold-light sm:text-sm">
           <span className="min-w-0 break-words leading-relaxed">{foundersTaglines[1]}</span>
@@ -58,7 +52,7 @@ export default function Home() {
         </div>
       </HeroBanner>
 
-      <ComingSoonMarquee />
+      <ComingSoonCards />
 
       {/* Welcome */}
       <Section
@@ -157,6 +151,7 @@ export default function Home() {
 
       {/* Coming Soon */}
       <Section
+        id="coming-soon"
         eyebrow="Coming Soon"
         title="Coming Soon"
         description={comingSoonIntro}

@@ -11,6 +11,8 @@ interface HeroBannerProps {
   children?: ReactNode;
   /** Show a subtle world-map + cargo-ship motif overlay (used on Home). */
   showGlobalMotif?: boolean;
+  /** Reserve extra bottom space for content that overlaps the hero's lower edge. */
+  overlap?: boolean;
 }
 
 /**
@@ -25,6 +27,7 @@ export function HeroBanner({
   subtitle,
   children,
   showGlobalMotif = false,
+  overlap = false,
 }: HeroBannerProps) {
   return (
     <section className="relative flex min-h-[min(70vh,700px)] w-full overflow-hidden">
@@ -53,7 +56,11 @@ export function HeroBanner({
         </svg>
       )}
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-4 pb-12 pt-32 sm:px-10">
+      <div
+        className={`relative z-10 mx-auto flex w-full max-w-7xl items-center px-4 pt-32 sm:px-10 ${
+          overlap ? "pb-28 sm:pb-32" : "pb-12"
+        }`}
+      >
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
