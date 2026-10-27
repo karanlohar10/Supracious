@@ -50,6 +50,34 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(0);
 }
 
+/* Coming-soon hero pill: soft gold glow and a periodic shimmer sweep */
+.pill-glow {
+  animation: pill-glow 3s ease-in-out infinite;
+}
+
+.pill-shimmer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 35%, rgb(226 201 138 / 0.35) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: pill-shimmer 4.5s ease-in-out 2s infinite;
+}
+
+@keyframes pill-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(200 169 91 / 0); }
+  50% { box-shadow: 0 0 22px 2px rgb(200 169 91 / 0.35); }
+}
+
+@keyframes pill-shimmer {
+  0% { transform: translateX(-100%); }
+  45%, 100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill-glow, .pill-shimmer { animation: none; }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

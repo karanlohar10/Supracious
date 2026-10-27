@@ -18,7 +18,8 @@ import {
 import heroHome from "@/assets/hero/home.jpg";
 import foodSoilTestingLaboratory from "@/assets/coming-soon/food-soil-testing-laboratory.jpg";
 import soilMicronutrientSolutions from "@/assets/coming-soon/soil-micronutrient-solutions.jpg";
-import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ShieldCheck, Sparkles } from "lucide-react";
+import { ComingSoonPill } from "@/components/home/ComingSoonPill";
 
 const comingSoonImages: Record<string, string> = {
   "Food & Soil Testing Laboratory": foodSoilTestingLaboratory,
@@ -55,34 +56,7 @@ export default function Home() {
             <Link to="/about">Discover Our Story</Link>
           </Button>
         </div>
-        <a
-          href="#coming-soon"
-          className="group mt-6 inline-flex max-w-full items-center gap-3 rounded-2xl border border-gold/50 bg-black/35 px-4 py-2.5 backdrop-blur-md transition-colors hover:border-gold hover:bg-black/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold sm:rounded-full sm:px-5"
-        >
-          <span className="relative flex size-2 shrink-0" aria-hidden="true">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-gold opacity-60 motion-reduce:animate-none" />
-            <span className="relative inline-flex size-2 rounded-full bg-gold" />
-          </span>
-          <span className="min-w-0 font-body text-xs text-ivory/90 sm:text-sm">
-            <span className="whitespace-nowrap font-semibold uppercase tracking-[0.18em] text-gold-light">
-              Coming soon
-            </span>
-            <span className="mx-2 text-gold/70" aria-hidden="true">
-              |
-            </span>
-            {comingSoon.map((c, i) => (
-              <span key={c.name} className="sm:whitespace-nowrap">
-                {i > 0 && <span className="mx-1.5 text-gold/70">·</span>}
-                {c.name}
-              </span>
-            ))}
-          </span>
-          <ArrowRight
-            size={16}
-            className="shrink-0 text-gold transition-transform group-hover:translate-x-1"
-            aria-hidden="true"
-          />
-        </a>
+        <ComingSoonPill />
       </HeroBanner>
 
       {/* Welcome */}
